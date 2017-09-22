@@ -7,7 +7,7 @@ clientsNode{
   println envStage
   def newVersion = ''
 
-  git 'http://gogs.default.9.110.178.111.nip.io/gogsadmin/testcreatingnodejs'
+  git '{{.GitUrl}}'
 
   stage 'Canary release'
   echo 'NOTE: running pipelines for the first time will take longer as build and base docker images are pulled onto the node'
