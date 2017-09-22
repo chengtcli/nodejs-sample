@@ -1,0 +1,8 @@
+---
+buildName: "{{.AppName}}"
+links:
+  Git: "{{.GitUrl}}"
+  Job: "{{.JobUrl}}"
+environments:
+  Staging: "default-staging"
+useLocalFlow: true
