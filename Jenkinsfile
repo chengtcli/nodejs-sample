@@ -1,10 +1,8 @@
 #!/usr/bin/groovy
-@Library('github.com/fabric8io/fabric8-pipeline-library@v2.2.311')
+@Library('gogs/gogsadmin/fabric8-pipeline-library@offline')
 def utils = new io.fabric8.Utils()
-println utils
 clientsNode{
   def envStage = utils.environmentNamespace('staging')
-  println envStage
   def newVersion = ''
 
   git '{{.GitUrl}}'
