@@ -10,7 +10,7 @@ clientsNode{
   stage 'Canary release'
   echo 'NOTE: running pipelines for the first time will take longer as build and base docker images are pulled onto the node'
   if (!fileExists ('Dockerfile')) {
-    writeFile file: 'Dockerfile', text: 'FROM node:5.3-onbuild'
+    writeFile file: 'Dockerfile', text: 'FROM 10.253.0.11/library/node:5.3-onbuild'
   }
 
   newVersion = performCanaryRelease {}
